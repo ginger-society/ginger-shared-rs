@@ -1,6 +1,8 @@
 [package]
+description = "Common shared code for Rust code base"
+edition = "2021"
+license = "MIT"
 name = "ginger-shared-rs"
 version = "0.2.0-nightly.0"
-edition = "2021"
 
 [dependencies]
