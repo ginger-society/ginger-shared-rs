@@ -55,13 +55,13 @@ pub struct ConsumerDBConfig {
     pub tables: DBTables,
 }
 
-pub fn write_db_config<P: AsRef<Path>>(path: P, config: &ConsumerDBConfig) -> () {
+pub fn write_consumer_db_config<P: AsRef<Path>>(path: P, config: &ConsumerDBConfig) -> () {
     let toml_string = toml::to_string(config).unwrap();
     let mut file = File::create(path).unwrap();
     file.write_all(toml_string.as_bytes()).unwrap();
 }
 
-pub fn read_db_config<P: AsRef<Path>>(
+pub fn read_consumer_db_config<P: AsRef<Path>>(
     path: P,
 ) -> Result<ConsumerDBConfig, Box<dyn std::error::Error>> {
     // Open the file
