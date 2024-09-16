@@ -3,7 +3,7 @@ use std::{cmp::Ordering, collections::HashMap, error::Error, fmt, fs, path::Path
 
 use serde::{Deserialize, Serialize};
 
-mod utils;
+pub mod utils;
 
 #[derive(Debug, Serialize, Deserialize)]
 pub enum ORM {
@@ -104,7 +104,7 @@ pub enum FileType {
 }
 
 impl FileType {
-    fn from_extension(ext: Option<&str>) -> FileType {
+    pub fn from_extension(ext: Option<&str>) -> FileType {
         match ext {
             Some("py") => FileType::Py,
             Some("toml") => FileType::Toml,
