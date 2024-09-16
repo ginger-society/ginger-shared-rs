@@ -1,0 +1,7 @@
+dir = "."
+lang = "TS"
+organization_id = "ginger-society"
+
+[portals_refs]
+
+[services]
