@@ -1,8 +1,18 @@
+## 0.4.0-nightly.0 - 2024-09-16
+fix:
+ - [bbc170638b](https://github.com/ginger-society/ginger-shared-rsbbc170638b972a33e9f5af6c6746992eca748bea) (Ginger Society Admin) fix: pipeline
+	
+feat:
+ - [074baa7157](https://github.com/ginger-society/ginger-shared-rs074baa715708334629f19c63407381b85e810333) (Ginger Society Admin) feat: added serde and toml as dependencies and moved common structs to lib
+	
 ## 0.3.0-nightly.0 - 2024-09-15
 feat:
  - [2d9a39b628](https://github.com/ginger-society/ginger-shared-rs2d9a39b628351b50fc0d7a3d80cdd985e1131fab) (Ginger Society Admin) feat: added workflow to publish
 	
  - [b93261e573](https://github.com/ginger-society/ginger-shared-rsb93261e57345f8cd0c67df5ceb561a4ad4a101df) (Ginger Society Admin) feat: updated metadata
+	
+chore:
+ - [d8575e1efb](https://github.com/ginger-society/ginger-shared-rsd8575e1efb5453cfb118d1347ba2e2c885bfc88f) (Ginger Society Admin) chore: version bump to 0.3.0-nightly.0
 	
 ## 0.2.0-nightly.0 - 2024-09-15
 chore:
