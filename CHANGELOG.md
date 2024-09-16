@@ -1,19 +1,26 @@
+## 0.6.0-nightly.0 - 2024-09-16
+feat:
+ - [54d218bf27](https://github.com/ginger-society/ginger-shared-rs54d218bf271693c01bd7e6818245f6a4267e1ced) (Ginger Society Admin) feat: added write releaser file fn
+	
 ## 0.5.0-nightly.0 - 2024-09-16
 fix:
  - [aa2f59df8d](https://github.com/ginger-society/ginger-shared-rsaa2f59df8d79ad731dbc2e17d44d7d6ed8c49d61) (Ginger Society Admin) fix: build
+	
+chore:
+ - [b6a408e5e8](https://github.com/ginger-society/ginger-shared-rsb6a408e5e8dda7a093718bc12265fb2767e94ee9) (Ginger Society Admin) chore: version bump to 0.5.0-nightly.0
 	
 feat:
  - [f450ca213f](https://github.com/ginger-society/ginger-shared-rsf450ca213f1748bb7e0081022a7dff6181f82dd2) (Ginger Society Admin) feat: updated releaser config
 	
 ## 0.4.0-nightly.0 - 2024-09-16
-fix:
- - [bbc170638b](https://github.com/ginger-society/ginger-shared-rsbbc170638b972a33e9f5af6c6746992eca748bea) (Ginger Society Admin) fix: pipeline
+chore:
+ - [31ea1d446f](https://github.com/ginger-society/ginger-shared-rs31ea1d446fca90d024fa33e2c0b168f33c4a2fc2) (Ginger Society Admin) chore: version bump to 0.4.0-nightly.0
 	
 feat:
  - [074baa7157](https://github.com/ginger-society/ginger-shared-rs074baa715708334629f19c63407381b85e810333) (Ginger Society Admin) feat: added serde and toml as dependencies and moved common structs to lib
 	
-chore:
- - [31ea1d446f](https://github.com/ginger-society/ginger-shared-rs31ea1d446fca90d024fa33e2c0b168f33c4a2fc2) (Ginger Society Admin) chore: version bump to 0.4.0-nightly.0
+fix:
+ - [bbc170638b](https://github.com/ginger-society/ginger-shared-rsbbc170638b972a33e9f5af6c6746992eca748bea) (Ginger Society Admin) fix: pipeline
 	
 ## 0.3.0-nightly.0 - 2024-09-15
 feat:
@@ -25,11 +32,11 @@ chore:
  - [d8575e1efb](https://github.com/ginger-society/ginger-shared-rsd8575e1efb5453cfb118d1347ba2e2c885bfc88f) (Ginger Society Admin) chore: version bump to 0.3.0-nightly.0
 	
 ## 0.2.0-nightly.0 - 2024-09-15
-chore:
- - [3f1d599fe6](https://github.com/ginger-society/ginger-shared-rs3f1d599fe691a0314925e7a5fbd9e1a80077a790) (Ginger Society Admin) chore: version bump to 0.2.0-nightly.0
-	
 feat:
  - [65bcae9e60](https://github.com/ginger-society/ginger-shared-rs65bcae9e609d74adcc7412090436656dc10ac4c7) (Ginger Society Admin) feat: added changelog to git
+	
+chore:
+ - [3f1d599fe6](https://github.com/ginger-society/ginger-shared-rs3f1d599fe691a0314925e7a5fbd9e1a80077a790) (Ginger Society Admin) chore: version bump to 0.2.0-nightly.0
 	
 ## 0.1.0-nightly.0 - 2024-09-15
 feat:
