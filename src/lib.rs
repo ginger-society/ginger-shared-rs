@@ -34,7 +34,7 @@ impl fmt::Display for ORM {
 }
 
 #[derive(Deserialize, Debug, Serialize)]
-pub struct DBSchema {
+pub struct ConsumerDBSchema {
     pub url: String,
     pub lang: LANG,
     pub orm: ORM,
@@ -51,7 +51,7 @@ pub struct ConsumerDBTables {
 
 #[derive(Deserialize, Debug, Serialize)]
 pub struct ConsumerDBConfig {
-    pub schema: DBSchema,
+    pub schema: ConsumerDBSchema,
     pub tables: ConsumerDBTables,
 }
 
