@@ -106,7 +106,7 @@ impl LANG {
 }
 
 #[derive(Deserialize, Debug, Serialize, Clone)]
-pub struct Config {
+pub struct ServiceConfig {
     pub services: Option<HashMap<String, HashMap<String, String>>>,
     pub portals_refs: Option<HashMap<String, HashMap<String, String>>>,
     pub lang: LANG,
@@ -336,9 +336,9 @@ pub fn write_releaser_config_file(
     Ok(())
 }
 
-pub fn read_config_file<P: AsRef<Path>>(path: P) -> Result<Config, Box<dyn Error>> {
+pub fn read_service_config_file<P: AsRef<Path>>(path: P) -> Result<ServiceConfig, Box<dyn Error>> {
     let content = fs::read_to_string(path)?;
-    let config: Config = toml::from_str(&content)?;
+    let config: ServiceConfig = toml::from_str(&content)?;
     Ok(config)
 }
 
@@ -350,7 +350,10 @@ pub fn read_package_metadata_file<P: AsRef<Path>>(
     Ok(config)
 }
 
-pub fn write_config_file<P: AsRef<Path>>(path: P, config: &Config) -> Result<(), Box<dyn Error>> {
+pub fn write_service_config_file<P: AsRef<Path>>(
+    path: P,
+    config: &ServiceConfig,
+) -> Result<(), Box<dyn Error>> {
     let content = toml::to_string(config)?;
     fs::write(path, content)?;
     Ok(())
