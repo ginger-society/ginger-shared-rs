@@ -95,7 +95,7 @@ pub struct PackageMetadata {
     pub package_type: String,
 }
 
-#[derive(Debug)]
+#[derive(Debug, Clone)]
 pub enum FileType {
     Py,
     Toml,
@@ -235,7 +235,7 @@ impl PartialEq for Version {
             && self.revision == other.revision
     }
 }
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Serialize, Deserialize, Clone)]
 pub enum OutputType {
     String,
     Tuple,
@@ -250,7 +250,7 @@ impl fmt::Display for OutputType {
     }
 }
 
-#[derive(Debug, Deserialize, Serialize)]
+#[derive(Debug, Deserialize, Serialize, Clone)]
 pub struct Reference {
     pub file_name: String,
     #[serde(default = "default_output_type")] // Use a default value function
@@ -277,6 +277,12 @@ pub struct ReleaserSettings {
 pub struct ReleaserConfig {
     pub settings: ReleaserSettings,
     pub version: Version,
+    #[serde(default = "default_references")]
+    pub references: Vec<Reference>,
+}
+
+fn default_references() -> Vec<Reference> {
+    vec![]
 }
 
 pub fn read_releaser_config_file<P: AsRef<Path>>(
