@@ -1,3 +1,11 @@
+## 0.10.0-nightly.0 - 2024-09-16
+feat:
+ - [7933a52c1c](https://github.com/ginger-society/ginger-shared-rs7933a52c1c57d42b0a2ac5bac0dca9afa7cf23be) (Ginger Society Admin) feat: renamed DBconfig to Consumer DB config
+	
+## 0.9.0-nightly.0 - 2024-09-16
+chore:
+ - [02846cbf67](https://github.com/ginger-society/ginger-shared-rs02846cbf67e737ca6db89a8f32ae2f8b37ddce34) (Ginger Society Admin) chore: version bump to 0.9.0-nightly.0
+	
 ## 0.8.0-nightly.0 - 2024-09-16
 chore:
  - [0f75f8a8e6](https://github.com/ginger-society/ginger-shared-rs0f75f8a8e6640e2e97b70520953b699f57f162bd) (Ginger Society Admin) chore: version bump to 0.8.0-nightly.0
