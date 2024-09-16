@@ -41,7 +41,7 @@ pub struct DBTables {
 }
 
 #[derive(Deserialize, Debug, Serialize)]
-pub struct DBConfig {
+pub struct ConsumerDBConfig {
     pub schema: DBSchema,
     pub tables: DBTables,
 }
