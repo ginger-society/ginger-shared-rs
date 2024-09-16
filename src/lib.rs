@@ -45,14 +45,14 @@ pub struct DBSchema {
 }
 
 #[derive(Deserialize, Debug, Serialize)]
-pub struct DBTables {
+pub struct ConsumerDBTables {
     pub names: Vec<String>,
 }
 
 #[derive(Deserialize, Debug, Serialize)]
 pub struct ConsumerDBConfig {
     pub schema: DBSchema,
-    pub tables: DBTables,
+    pub tables: ConsumerDBTables,
 }
 
 pub fn write_consumer_db_config<P: AsRef<Path>>(path: P, config: &ConsumerDBConfig) -> () {
