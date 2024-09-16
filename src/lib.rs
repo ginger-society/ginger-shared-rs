@@ -297,6 +297,15 @@ pub fn read_releaser_config_file<P: AsRef<Path>>(
     Ok(settings)
 }
 
+pub fn write_releaser_config_file(
+    file_path: &str,
+    config: &ReleaserConfig,
+) -> Result<(), Box<dyn Error>> {
+    let toml_str = toml::to_string(config)?;
+    fs::write(file_path, toml_str)?;
+    Ok(())
+}
+
 pub fn read_config_file<P: AsRef<Path>>(path: P) -> Result<Config, Box<dyn Error>> {
     let content = fs::read_to_string(path)?;
     let config: Config = toml::from_str(&content)?;
