@@ -431,3 +431,24 @@ pub fn write_db_config(
     file.write_all(toml_string.as_bytes())?;
     Ok(())
 }
+
+#[derive(ValueEnum, Clone, PartialEq)]
+enum Environment {
+    Dev,
+    Stage,
+    Prod,
+    ProdK8,
+    StageK8,
+}
+
+impl fmt::Display for Environment {
+    fn fmt(&self, f: &mut fmt::Formatter<'_>) -> fmt::Result {
+        match self {
+            Environment::Dev => write!(f, "dev"),
+            Environment::Stage => write!(f, "stage"),
+            Environment::Prod => write!(f, "prod"),
+            Environment::ProdK8 => write!(f, "prod_k8"),
+            Environment::StageK8 => write!(f, "stage_k8"),
+        }
+    }
+}
