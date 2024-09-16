@@ -433,7 +433,7 @@ pub fn write_db_config(
 }
 
 #[derive(ValueEnum, Clone, PartialEq)]
-enum Environment {
+pub enum Environment {
     Dev,
     Stage,
     Prod,
