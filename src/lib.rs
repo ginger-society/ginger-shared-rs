@@ -93,9 +93,9 @@ pub enum LANG {
 impl fmt::Display for LANG {
     fn fmt(&self, f: &mut fmt::Formatter<'_>) -> fmt::Result {
         match self {
-            LANG::Rust => write!(f, "rust"),
-            LANG::TS => write!(f, "typescript"),
-            LANG::Python => write!(f, "python"),
+            LANG::Rust => write!(f, "Rust"),
+            LANG::TS => write!(f, "TS"),
+            LANG::Python => write!(f, "Python"),
         }
     }
 }
