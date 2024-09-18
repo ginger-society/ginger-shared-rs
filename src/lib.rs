@@ -125,6 +125,7 @@ pub struct Link {
     pub internal: bool,
     pub label: String,
     pub icon: String,
+    pub link: String,
 }
 
 impl fmt::Display for Link {
