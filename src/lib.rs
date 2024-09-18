@@ -120,10 +120,33 @@ pub struct ServiceConfig {
     pub service_type: Option<String>,
 }
 
+#[derive(Debug, Deserialize, Serialize, Clone)]
+pub struct Link {
+    pub internal: bool,
+    pub label: String,
+    pub icon: String,
+}
+
+impl fmt::Display for Link {
+    fn fmt(&self, f: &mut fmt::Formatter<'_>) -> fmt::Result {
+        write!(
+            f,
+            "[internal: {}, label: {}, icon: {}]",
+            self.internal, self.label, self.icon
+        )
+    }
+}
+
 #[derive(Deserialize, Debug, Serialize, Clone)]
 pub struct PackageMetadata {
     pub lang: LANG,
     pub package_type: String,
+    #[serde(default = "default_links")]
+    pub links: Vec<Link>,
+}
+
+fn default_links() -> Vec<Link> {
+    vec![]
 }
 
 #[derive(Debug, Clone)]
