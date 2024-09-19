@@ -138,6 +138,15 @@ impl fmt::Display for Link {
     }
 }
 
+impl PartialEq for Link {
+    fn eq(&self, other: &Self) -> bool {
+        self.internal == other.internal
+            && self.label == other.label
+            && self.icon == other.icon
+            && self.link == other.link
+    }
+}
+
 #[derive(Deserialize, Debug, Serialize, Clone)]
 pub struct PackageMetadata {
     pub lang: LANG,
@@ -400,6 +409,8 @@ pub struct DatabaseConfig {
     pub name: String,
     pub port: String,
     pub studio_port: Option<String>,
+    #[serde(default = "default_links")]
+    pub links: Vec<Link>,
 }
 
 impl fmt::Display for DatabaseConfig {
