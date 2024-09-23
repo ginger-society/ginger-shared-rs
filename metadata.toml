@@ -1,2 +1,26 @@
 lang = "Rust"
 package_type = "library"
+
+[[links]]
+icon = "FaRust"
+internal = true
+label = "View on crate.io"
+link = "https://crates.io/crates/ginger-shared-rs"
+
+[[links]]
+icon = "FaCodeBranch"
+internal = true
+label = "Pull Requests"
+link = "https://github.com/ginger-society/ginger-shared-rs/pulls"
+
+[[links]]
+icon = "FaRegPlayCircle"
+internal = true
+label = "Pipelines"
+link = "https://github.com/ginger-society/ginger-shared-rs/actions"
+
+[[links]]
+icon = "FaGithub"
+internal = true
+label = "Browse Repo"
+link = "https://github.com/ginger-society/ginger-shared-rs"

@@ -335,6 +335,12 @@ fn default_output_type() -> OutputType {
 #[derive(Debug, Deserialize, Serialize, Clone)]
 pub struct ReleaserSettings {
     pub git_url_prefix: Option<String>,
+    #[serde(default = "default_take_snapshots")]
+    pub take_snapshots: bool,
+}
+
+fn default_take_snapshots() -> bool {
+    false
 }
 
 #[derive(Debug, Deserialize, Serialize, Clone)]
