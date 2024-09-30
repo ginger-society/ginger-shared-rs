@@ -431,6 +431,7 @@ pub enum DbType {
     Rdbms,
     DocumentDb,
     Cache,
+    MessageQueue,
 }
 
 impl fmt::Display for DbType {
@@ -439,6 +440,7 @@ impl fmt::Display for DbType {
             DbType::Rdbms => "rdbms",
             DbType::DocumentDb => "documentdb",
             DbType::Cache => "cache",
+            DbType::MessageQueue => "messagequeue",
         };
         write!(f, "{}", db_type_str)
     }
@@ -452,6 +454,7 @@ impl FromStr for DbType {
             "rdbms" => Ok(DbType::Rdbms),
             "documentdb" => Ok(DbType::DocumentDb),
             "cache" => Ok(DbType::Cache),
+            "messagequeue" => Ok(DbType::MessageQueue),
             _ => Err(format!("'{}' is not a valid DbType", s)),
         }
     }
