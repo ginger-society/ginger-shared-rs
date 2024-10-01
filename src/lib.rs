@@ -42,6 +42,7 @@ pub struct ConsumerDBSchema {
     pub root: String,
     pub schema_id: Option<String>,
     pub cache_schema_id: Option<String>,
+    pub message_queue_schema_id: Option<String>,
     pub branch: Option<String>,
 }
 
