@@ -1,5 +1,5 @@
 dir = "."
-lang = "TS"
+lang = "Rust"
 organization_id = "ginger-society"
 
 [portals_refs]
