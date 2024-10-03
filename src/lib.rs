@@ -89,6 +89,7 @@ pub enum LANG {
     Rust,
     TS,
     Python,
+    Shell,
 }
 
 impl fmt::Display for LANG {
@@ -97,13 +98,14 @@ impl fmt::Display for LANG {
             LANG::Rust => write!(f, "Rust"),
             LANG::TS => write!(f, "TS"),
             LANG::Python => write!(f, "Python"),
+            LANG::Shell => write!(f, "Shell"),
         }
     }
 }
 
 impl LANG {
     pub fn all() -> Vec<LANG> {
-        vec![LANG::Rust, LANG::TS, LANG::Python]
+        vec![LANG::Rust, LANG::TS, LANG::Python, LANG::Shell]
     }
 }
 
