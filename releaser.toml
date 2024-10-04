@@ -5,7 +5,7 @@ take_snapshots = false
 [version]
 channel = "Nightly"
 major = 0
-minor = 29
+minor = 30
 patch = 0
 revision = 0
 
