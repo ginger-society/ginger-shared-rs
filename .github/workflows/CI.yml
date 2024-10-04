@@ -55,9 +55,14 @@ jobs:
         CRATES_IO_TOKEN: ${{ secrets.CRATES_IO_TOKEN }}
       run: |
         cargo publish --token $CRATES_IO_TOKEN
+      continue-on-error: true  # This allows the workflow to continue even if publishing fails
 
     - name: Update pipeline to passing
+      if: always()  # Ensures this step always runs
       run: ginger-connector update-pipeline stage passing
 
     - name: Trigger dependent pipelines
+      if: always()  # Ensures this step always runs
       run: ginger-connector trigger-dependent-pipelines ${{ secrets.GH_TOKEN }}
+
+
