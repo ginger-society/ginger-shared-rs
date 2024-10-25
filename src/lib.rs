@@ -499,3 +499,11 @@ impl fmt::Display for Environment {
         }
     }
 }
+
+#[derive(Serialize, Deserialize, Debug)]
+pub struct ISCClaims {
+    pub sub: String,
+    pub exp: usize,
+    pub org_id: String,
+    pub scopes: Vec<String>,
+}
