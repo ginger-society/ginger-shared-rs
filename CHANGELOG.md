@@ -1,4 +1,11 @@
+## 0.33.0-nightly.0 - 2024-10-30
+feat:
+ - [1584f03339](https://github.com/ginger-society/ginger-shared-rs1584f03339e7d5ca915cae2e86c4cc0076b7455b) (Ginger Society Admin) feat: added rocket models
+	
 ## 0.32.0-nightly.0 - 2024-10-30
+chore:
+ - [9eb320baa4](https://github.com/ginger-society/ginger-shared-rs9eb320baa4e190f77ecbae4fed4c16030a480b53) (Ginger Society Admin) chore: version bump to 0.32.0-nightly.0
+	
 feat:
  - [91e84c1cbe](https://github.com/ginger-society/ginger-shared-rs91e84c1cbe33c34b360257288c518e6afc61fe6c) (Ginger Society Admin) feat: added rocket api utils for auth middlewares
 	
@@ -14,18 +21,18 @@ feat:
  - [5f2111e4bc](https://github.com/ginger-society/ginger-shared-rs5f2111e4bc4c77a5c9a5ee91e3a659ffd985ead2) (Ginger Society Admin) feat: updated pipeline to update the pipeline status in case publish fails
 	
 ## 0.30.0-nightly.0 - 2024-10-04
-feat:
- - [7d7a41ae35](https://github.com/ginger-society/ginger-shared-rs7d7a41ae35b901a0577721c86c5bf35c8e4f3da8) (Ginger Society Admin) feat: updated pipeline to be able to be triggered from api
-	
 chore:
  - [e45df64833](https://github.com/ginger-society/ginger-shared-rse45df648330bb0bc5ce95eba74ac6d7824804ad2) (Ginger Society Admin) chore: version bump to 0.30.0-nightly.0
 	
-## 0.29.0-nightly.0 - 2024-10-03
-chore:
- - [04d91ae81b](https://github.com/ginger-society/ginger-shared-rs04d91ae81b66e9dc27057171039293d5315fcb59) (Ginger Society Admin) chore: version bump to 0.29.0-nightly.0
+feat:
+ - [7d7a41ae35](https://github.com/ginger-society/ginger-shared-rs7d7a41ae35b901a0577721c86c5bf35c8e4f3da8) (Ginger Society Admin) feat: updated pipeline to be able to be triggered from api
 	
+## 0.29.0-nightly.0 - 2024-10-03
 feat:
  - [326206fd67](https://github.com/ginger-society/ginger-shared-rs326206fd67e075c99227a6fd3feec68d0a2dae86) (Ginger Society Admin) feat: added shell as option in lang
+	
+chore:
+ - [04d91ae81b](https://github.com/ginger-society/ginger-shared-rs04d91ae81b66e9dc27057171039293d5315fcb59) (Ginger Society Admin) chore: version bump to 0.29.0-nightly.0
 	
 ## 0.28.0-nightly.0 - 2024-10-01
 chore:
@@ -36,17 +43,17 @@ chore:
  - [fc855d71bd](https://github.com/ginger-society/ginger-shared-rsfc855d71bd4e2729529ff250a1621b1af25e1583) (Ginger Society Admin) chore: version bump to 0.27.0-nightly.0
 	
 ## 0.26.0-nightly.0 - 2024-10-01
-feat:
- - [08ded55ec9](https://github.com/ginger-society/ginger-shared-rs08ded55ec9022d695fe1f7b3686b32e1cb4446f5) (Ginger Society) feat: Update and rename ci.yml to CI.yml
 chore:
  - [9a641649da](https://github.com/ginger-society/ginger-shared-rs9a641649da633b8077a295d83bcabc7c3aa57014) (Ginger Society Admin) chore: version bump to 0.26.0-nightly.0
 	
+feat:
+ - [08ded55ec9](https://github.com/ginger-society/ginger-shared-rs08ded55ec9022d695fe1f7b3686b32e1cb4446f5) (Ginger Society) feat: Update and rename ci.yml to CI.yml
 ## 0.25.0-nightly.0 - 2024-10-01
-chore:
- - [83d448246c](https://github.com/ginger-society/ginger-shared-rs83d448246cc997953da83904c9e66f90da14e843) (Ginger Society Admin) chore: version bump to 0.25.0-nightly.0
-	
 feat:
  - [9a72dc2700](https://github.com/ginger-society/ginger-shared-rs9a72dc27009a5d9a09bdf170c5a6bd4d9ef7fc87) (Ginger Society Admin) feat: added message queue in dbschema config
+	
+chore:
+ - [83d448246c](https://github.com/ginger-society/ginger-shared-rs83d448246cc997953da83904c9e66f90da14e843) (Ginger Society Admin) chore: version bump to 0.25.0-nightly.0
 	
 ## 0.24.0-nightly.0 - 2024-09-30
 chore:
@@ -137,11 +144,11 @@ chore:
  - [0a688a73d4](https://github.com/ginger-society/ginger-shared-rs0a688a73d423185094669aa0f81581507660840f) (Ginger Society Admin) chore: version bump to 0.11.0-nightly.0
 	
 ## 0.10.0-nightly.0 - 2024-09-16
-chore:
- - [e25c9747e8](https://github.com/ginger-society/ginger-shared-rse25c9747e87e1b557e8883084294c9f5041dba55) (Ginger Society Admin) chore: version bump to 0.10.0-nightly.0
-	
 feat:
  - [7933a52c1c](https://github.com/ginger-society/ginger-shared-rs7933a52c1c57d42b0a2ac5bac0dca9afa7cf23be) (Ginger Society Admin) feat: renamed DBconfig to Consumer DB config
+	
+chore:
+ - [e25c9747e8](https://github.com/ginger-society/ginger-shared-rse25c9747e87e1b557e8883084294c9f5041dba55) (Ginger Society Admin) chore: version bump to 0.10.0-nightly.0
 	
 ## 0.9.0-nightly.0 - 2024-09-16
 chore:
@@ -156,11 +163,11 @@ chore:
  - [03b8396481](https://github.com/ginger-society/ginger-shared-rs03b83964817716106480f0652d95b2b30a6303c5) (Ginger Society Admin) chore: version bump to 0.7.0-nightly.0
 	
 ## 0.6.0-nightly.0 - 2024-09-16
-feat:
- - [54d218bf27](https://github.com/ginger-society/ginger-shared-rs54d218bf271693c01bd7e6818245f6a4267e1ced) (Ginger Society Admin) feat: added write releaser file fn
-	
 chore:
  - [d36e8dc1b6](https://github.com/ginger-society/ginger-shared-rsd36e8dc1b6f0e01d2a7fddeca851deefb6946281) (Ginger Society Admin) chore: version bump to 0.6.0-nightly.0
+	
+feat:
+ - [54d218bf27](https://github.com/ginger-society/ginger-shared-rs54d218bf271693c01bd7e6818245f6a4267e1ced) (Ginger Society Admin) feat: added write releaser file fn
 	
 ## 0.5.0-nightly.0 - 2024-09-16
 fix:
@@ -173,23 +180,23 @@ feat:
  - [f450ca213f](https://github.com/ginger-society/ginger-shared-rsf450ca213f1748bb7e0081022a7dff6181f82dd2) (Ginger Society Admin) feat: updated releaser config
 	
 ## 0.4.0-nightly.0 - 2024-09-16
-chore:
- - [31ea1d446f](https://github.com/ginger-society/ginger-shared-rs31ea1d446fca90d024fa33e2c0b168f33c4a2fc2) (Ginger Society Admin) chore: version bump to 0.4.0-nightly.0
+fix:
+ - [bbc170638b](https://github.com/ginger-society/ginger-shared-rsbbc170638b972a33e9f5af6c6746992eca748bea) (Ginger Society Admin) fix: pipeline
 	
 feat:
  - [074baa7157](https://github.com/ginger-society/ginger-shared-rs074baa715708334629f19c63407381b85e810333) (Ginger Society Admin) feat: added serde and toml as dependencies and moved common structs to lib
 	
-fix:
- - [bbc170638b](https://github.com/ginger-society/ginger-shared-rsbbc170638b972a33e9f5af6c6746992eca748bea) (Ginger Society Admin) fix: pipeline
+chore:
+ - [31ea1d446f](https://github.com/ginger-society/ginger-shared-rs31ea1d446fca90d024fa33e2c0b168f33c4a2fc2) (Ginger Society Admin) chore: version bump to 0.4.0-nightly.0
 	
 ## 0.3.0-nightly.0 - 2024-09-15
+chore:
+ - [d8575e1efb](https://github.com/ginger-society/ginger-shared-rsd8575e1efb5453cfb118d1347ba2e2c885bfc88f) (Ginger Society Admin) chore: version bump to 0.3.0-nightly.0
+	
 feat:
  - [2d9a39b628](https://github.com/ginger-society/ginger-shared-rs2d9a39b628351b50fc0d7a3d80cdd985e1131fab) (Ginger Society Admin) feat: added workflow to publish
 	
  - [b93261e573](https://github.com/ginger-society/ginger-shared-rsb93261e57345f8cd0c67df5ceb561a4ad4a101df) (Ginger Society Admin) feat: updated metadata
-	
-chore:
- - [d8575e1efb](https://github.com/ginger-society/ginger-shared-rsd8575e1efb5453cfb118d1347ba2e2c885bfc88f) (Ginger Society Admin) chore: version bump to 0.3.0-nightly.0
 	
 ## 0.2.0-nightly.0 - 2024-09-15
 feat:
@@ -199,13 +206,13 @@ chore:
  - [3f1d599fe6](https://github.com/ginger-society/ginger-shared-rs3f1d599fe691a0314925e7a5fbd9e1a80077a790) (Ginger Society Admin) chore: version bump to 0.2.0-nightly.0
 	
 ## 0.1.0-nightly.0 - 2024-09-15
-chore:
- - [88856a63cd](https://github.com/ginger-society/ginger-shared-rs88856a63cdd04430714ae6818b99b6fd123a9bbd) (Ginger Society Admin) chore: version bump to 0.1.0-nightly.0
-	
 feat:
  - [56dd62c712](https://github.com/ginger-society/ginger-shared-rs56dd62c712199a3becc1029c96ac8f05c84603e4) (Ginger Society Admin) feat: added releaser config
 	
  - [e4b2264846](https://github.com/ginger-society/ginger-shared-rse4b2264846ba78a5c2999905d90f97a106bd8f1c) (Ginger Society Admin) feat: added readme
 	
  - [f020e0d4ef](https://github.com/ginger-society/ginger-shared-rsf020e0d4ef112ebcfa29c8f1d91fe7e1464cefdf) (Ginger Society Admin) feat: first commit
+	
+chore:
+ - [88856a63cd](https://github.com/ginger-society/ginger-shared-rs88856a63cdd04430714ae6818b99b6fd123a9bbd) (Ginger Society Admin) chore: version bump to 0.1.0-nightly.0
 	
