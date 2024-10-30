@@ -13,6 +13,7 @@ use std::{
 
 use serde::{Deserialize, Serialize};
 
+pub mod rocket_utils;
 pub mod utils;
 
 #[derive(Debug, Serialize, Deserialize)]

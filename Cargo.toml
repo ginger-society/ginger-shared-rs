@@ -8,6 +8,12 @@ version = "0.31.0-nightly.0"
 [dependencies]
 clap = {version = "4.3.10", features = ["derive"]}
 dirs = "5.0.1"
+jsonwebtoken = "9.3.0"
+okapi = {version = "0.7.0"}
+rocket = {version = "0.5.0-rc.2", default-features = false, features = [
+  "json",
+]}
+rocket_okapi = {version = "0.8.0-rc.2", features = ["swagger", "secrets"]}
 serde = {version = "1.0.166", features = ["derive"]}
 serde_json = "1.0"
 toml = "0.8.14"
