@@ -3,8 +3,8 @@ use serde::{Deserialize, Serialize};
 
 #[derive(Serialize)]
 pub struct RealtimeMessage {
-    topic: String,
-    payload: String,
+    pub topic: String,
+    pub payload: String,
 }
 
 // Implement the `ToString` trait for the struct
