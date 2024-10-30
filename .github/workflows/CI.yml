@@ -13,19 +13,31 @@ jobs:
     steps:
     - name: Checkout code
       uses: actions/checkout@v3
+    - name: Report failure if checkout fails
+      if: failure()
+      run: ginger-connector update-pipeline stage failed
 
     - name: Install ginger-apps
       run: bash -c "$(curl -fsSL https://raw.githubusercontent.com/ginger-society/infra-as-code-repo/main/rust-helpers/install-all-clis.sh)"
+    - name: Report failure if ginger-apps installation fails
+      if: failure()
+      run: ginger-connector update-pipeline stage failed
 
     - name: Authenticate with ginger-auth
       id: ginger-auth
       run: ginger-auth token-login ${{ secrets.GINGER_TOKEN }}
+    - name: Report failure if authentication fails
+      if: failure()
+      run: ginger-connector update-pipeline stage failed
 
     - name: Update pipeline to running
       run: ginger-connector update-pipeline stage running
-      
+
     - name: Set up Rust
       uses: actions-rust-lang/setup-rust-toolchain@v1
+    - name: Report failure if Rust setup fails
+      if: failure()
+      run: ginger-connector update-pipeline stage failed
 
     - name: Cache Cargo registry
       uses: actions/cache@v3
@@ -36,6 +48,9 @@ jobs:
         key: ${{ runner.os }}-cargo-${{ hashFiles('**/Cargo.lock') }}
         restore-keys: |
           ${{ runner.os }}-cargo-
+    - name: Report failure if Cargo registry cache fails
+      if: failure()
+      run: ginger-connector update-pipeline stage failed
 
     - name: Cache Cargo build
       uses: actions/cache@v3
@@ -44,11 +59,17 @@ jobs:
         key: ${{ runner.os }}-cargo-target-${{ hashFiles('**/Cargo.lock') }}
         restore-keys: |
           ${{ runner.os }}-cargo-target-
+    - name: Report failure if Cargo build cache fails
+      if: failure()
+      run: ginger-connector update-pipeline stage failed
 
     - name: Build and Test
       run: |
         cargo build --verbose
         cargo test --verbose
+    - name: Report failure if build or test fails
+      if: failure()
+      run: ginger-connector update-pipeline stage failed
 
     - name: Publish Crate
       env:
@@ -56,13 +77,18 @@ jobs:
       run: |
         cargo publish --token $CRATES_IO_TOKEN
       continue-on-error: true  # This allows the workflow to continue even if publishing fails
+    - name: Report failure if publish fails
+      if: failure()
+      run: ginger-connector update-pipeline stage failed
 
     - name: Update pipeline to passing
-      if: always()  # Ensures this step always runs
+      if: success()
       run: ginger-connector update-pipeline stage passing
 
+    - name: Register or update the latest version
+      if: success()
+      run: ginger-connector register stage
+
     - name: Trigger dependent pipelines
-      if: always()  # Ensures this step always runs
+      if: success()
       run: ginger-connector trigger-dependent-pipelines ${{ secrets.GH_TOKEN }}
-
-
