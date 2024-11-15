@@ -115,10 +115,11 @@ impl LANG {
 pub struct ServiceConfig {
     pub services: Option<HashMap<String, HashMap<String, String>>>,
     pub portals_refs: Option<HashMap<String, HashMap<String, String>>>,
+    pub ws_refs: Option<HashMap<String, HashMap<String, String>>>,
     pub lang: LANG,
     pub organization_id: String,
     pub dir: Option<String>, // in case the project does not need any service integration
-    pub portal_refs_file: Option<String>,
+    pub refs_file: Option<String>,
     pub spec_url: Option<String>,
     pub urls: Option<HashMap<String, String>>,
     pub urls_ws: Option<HashMap<String, String>>,
