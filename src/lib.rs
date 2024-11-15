@@ -121,6 +121,7 @@ pub struct ServiceConfig {
     pub portal_refs_file: Option<String>,
     pub spec_url: Option<String>,
     pub urls: Option<HashMap<String, String>>,
+    pub urls_ws: Option<HashMap<String, String>>,
     pub override_name: Option<String>,
     pub service_type: Option<String>,
 }
