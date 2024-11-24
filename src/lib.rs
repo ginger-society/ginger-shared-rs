@@ -67,17 +67,36 @@ pub fn write_consumer_db_config<P: AsRef<Path>>(path: P, config: &ConsumerDBConf
 
 pub fn read_consumer_db_config<P: AsRef<Path>>(
     path: P,
-) -> Result<ConsumerDBConfig, Box<dyn std::error::Error>> {
-    // Open the file
-    let mut file = File::open(path).unwrap();
-    let mut contents = String::new();
-    file.read_to_string(&mut contents).unwrap();
+) -> Result<ConsumerDBConfig, Box<dyn Error>> {
+    // Try to open the file
+    let mut file = File::open(&path).map_err(|e| {
+        format!(
+            "Failed to open the file '{}': {}",
+            path.as_ref().display(),
+            e
+        )
+    })?;
 
-    // Deserialize the TOML contents into the DBConfig struct
-    match toml::from_str(&contents) {
-        Ok(config) => Ok(config),
-        Err(err) => Err(Box::new(err)),
-    }
+    let mut contents = String::new();
+
+    // Read the file contents
+    file.read_to_string(&mut contents).map_err(|e| {
+        format!(
+            "Failed to read the file '{}': {}",
+            path.as_ref().display(),
+            e
+        )
+    })?;
+
+    // Deserialize the TOML contents into the ConsumerDBConfig struct
+    toml::from_str(&contents).map_err(|e| {
+        format!(
+            "Failed to parse TOML from file '{}': {}",
+            path.as_ref().display(),
+            e
+        )
+        .into()
+    })
 }
 
 #[derive(Debug, Clone)]
