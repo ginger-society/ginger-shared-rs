@@ -3,7 +3,7 @@ description = "Common shared code for Rust code base"
 edition = "2021"
 license = "MIT"
 name = "ginger-shared-rs"
-version = "0.36.0-nightly.0"
+version = "0.37.0-nightly.0"
 
 [dependencies]
 clap = {version = "4.3.10", features = ["derive"]}
