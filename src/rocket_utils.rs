@@ -40,7 +40,7 @@ pub struct Claims {
     pub first_name: Option<String>,
     pub last_name: Option<String>,
     pub middle_name: Option<String>,
-    pub client_id: String,
+    pub client_id: Option<String>,
 }
 #[derive(Debug)]
 pub enum ClaimsError {
