@@ -144,6 +144,19 @@ pub struct ServiceConfig {
     pub urls_ws: Option<HashMap<String, String>>,
     pub override_name: Option<String>,
     pub service_type: Option<String>,
+    pub portal_config: Option<PortalConfig>,
+}
+
+#[derive(Deserialize, Debug, Serialize, Clone)]
+pub struct PortalConfig {
+    pub id: String,
+    pub logo_url: String,
+    pub disabled: bool,
+    pub access_group_id: Option<String>,
+    pub tnc_url: Option<String>,
+    pub allow_registration: bool,
+    pub auth_redirection_path: Option<String>,
+    pub has_web_interface: bool,
 }
 
 #[derive(Debug, Deserialize, Serialize, Clone)]
