@@ -152,7 +152,7 @@ pub struct PortalConfig {
     pub id: String,
     pub logo_url: String,
     pub disabled: bool,
-    pub access_group_id: Option<String>,
+    pub access_group_id: Option<i64>,
     pub tnc_url: Option<String>,
     pub allow_registration: bool,
     pub auth_redirection_path: Option<String>,
