@@ -157,6 +157,7 @@ pub struct PortalConfig {
     pub allow_registration: bool,
     pub auth_redirection_path: Option<String>,
     pub has_web_interface: bool,
+    pub friendly_name: String,
 }
 
 #[derive(Debug, Deserialize, Serialize, Clone)]
