@@ -48,12 +48,12 @@ pub struct ConsumerDBSchema {
     pub branch: Option<String>,
 }
 
-#[derive(Deserialize, Debug, Serialize)]
+#[derive(Deserialize, Debug, Serialize, Clone)]
 pub struct ConsumerDBTables {
     pub names: Vec<String>,
 }
 
-#[derive(Deserialize, Debug, Serialize, Clone, Copy)]
+#[derive(Deserialize, Debug, Serialize, Clone)]
 pub struct ConsumerDBConfig {
     pub schema: ConsumerDBSchema,
     pub tables: ConsumerDBTables,
