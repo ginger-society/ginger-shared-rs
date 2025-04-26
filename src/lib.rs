@@ -17,7 +17,7 @@ pub mod rocket_models;
 pub mod rocket_utils;
 pub mod utils;
 
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Serialize, Deserialize, Clone, Copy)]
 pub enum ORM {
     TypeORM,
     SQLAlchemy,
@@ -36,7 +36,7 @@ impl fmt::Display for ORM {
     }
 }
 
-#[derive(Deserialize, Debug, Serialize)]
+#[derive(Deserialize, Debug, Serialize, Clone)]
 pub struct ConsumerDBSchema {
     pub url: String,
     pub lang: LANG,
