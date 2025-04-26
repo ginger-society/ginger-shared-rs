@@ -17,6 +17,82 @@ use rocket::{
     request::{FromRequest, Outcome, Request},
 };
 
+
+
+#[derive(Serialize, Deserialize, Debug)]
+pub struct ISCClaims {
+    pub sub: String,
+    pub exp: usize,
+    pub org_id: String,
+    pub scopes: Vec<String>,
+}
+
+#[derive(Debug)]
+pub enum ISCClaimsError {
+    Missing,
+    Invalid,
+}
+
+
+
+#[rocket::async_trait]
+impl<'r> FromRequest<'r> for ISCClaims {
+    type Error = ISCClaimsError;
+
+    async fn from_request(request: &'r Request<'_>) -> Outcome<Self, Self::Error> {
+        let keys: Vec<_> = request.headers().get("X-API-Authorization").collect();
+        if keys.len() != 1 {
+            return Outcome::Error((Status::Unauthorized, ISCClaimsError::Missing));
+        }
+
+        let token_str = keys[0].trim_start_matches("Bearer ").trim();
+        let secret = env::var("JWT_SECRET").expect("JWT_SECRET must be set");
+        let decoding_key = DecodingKey::from_secret(secret.as_ref());
+
+        match decode::<ISCClaims>(
+            token_str,
+            &decoding_key,
+            &Validation::new(jsonwebtoken::Algorithm::HS256),
+        ) {
+            Ok(token_data) => Outcome::Success(token_data.claims),
+            Err(_) => Outcome::Error((Status::Unauthorized, ISCClaimsError::Invalid)),
+        }
+    }
+}
+
+impl<'a> OpenApiFromRequest<'a> for ISCClaims {
+    fn from_request_input(
+        _gen: &mut OpenApiGenerator,
+        _name: String,
+        _required: bool,
+    ) -> rocket_okapi::Result<RequestHeaderInput> {
+        let security_scheme = SecurityScheme {
+            description: Some("Requires a Bearer token to access".to_owned()),
+            data: SecuritySchemeData::ApiKey {
+                name: "X-API-Authorization".to_owned(),
+                location: "header".to_owned(),
+            },
+            extensions: Object::default(),
+        };
+
+        let mut security_req = SecurityRequirement::new();
+        security_req.insert("BearerAPIAuth".to_owned(), Vec::new());
+
+        Ok(RequestHeaderInput::Security(
+            "BearerAPIAuth".to_owned(),
+            security_scheme,
+            security_req,
+        ))
+    }
+
+    fn get_responses(
+        _gen: &mut rocket_okapi::gen::OpenApiGenerator,
+    ) -> rocket_okapi::Result<okapi::openapi3::Responses> {
+        Ok(okapi::openapi3::Responses::default())
+    }
+}
+
+
 #[derive(Serialize, Deserialize)]
 pub struct APIClaims {
     pub sub: String,
