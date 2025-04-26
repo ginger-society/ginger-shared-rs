@@ -53,7 +53,7 @@ pub struct ConsumerDBTables {
     pub names: Vec<String>,
 }
 
-#[derive(Deserialize, Debug, Serialize)]
+#[derive(Deserialize, Debug, Serialize, Clone, Copy)]
 pub struct ConsumerDBConfig {
     pub schema: ConsumerDBSchema,
     pub tables: ConsumerDBTables,
