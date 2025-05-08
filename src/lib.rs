@@ -455,7 +455,9 @@ pub struct DatabaseConfig {
     pub name: String,
     pub port: String,
     pub remote_port: Option<String>,
+    pub remote_service_name: Option<String>,
     pub remote_studio_port: Option<String>,
+    pub remote_studio_service_name: Option<String>,
     pub studio_port: Option<String>,
     #[serde(default = "default_links")]
     pub links: Vec<Link>,
